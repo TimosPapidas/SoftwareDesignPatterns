@@ -34,4 +34,10 @@ class Flight {
     + Flight(AircraftFactory aircraftFactory)
     + String abortFlight()
 }
+
+HueyFactory ..> Huey : builds
+MustangFactory ..> Mustang : builds
+Flight --> Aircraft : contains
+Flight --> AircraftFactory : receives
+note top of AircraftFactory : Abstract Factory, following the abstract factory pattern
 @enduml
