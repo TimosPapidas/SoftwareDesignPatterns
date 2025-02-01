@@ -1,0 +1,37 @@
+@startuml
+abstract class Aircraft{
+    # String liftProducer
+    # String thrustProducer
+    # int crew
+    + String getLiftProducer()
+    + String getThrustProducer()
+    + int getCrew()
+    + {abstract} String eject()
+}
+
+interface AircraftFactory{
+    + {abstract} Aircraft buildAircraft()
+}
+
+class Huey extends Aircraft {
+    + Huey()
+}
+
+class Mustang extends Aircraft {
+    + Mustang()
+}
+
+class HueyFactory implements AircraftFactory {
+
+}
+
+class MustangFactory implements AircraftFactory {
+
+}
+
+class Flight {
+    - Aircraft aircraft
+    + Flight(AircraftFactory aircraftFactory)
+    + String abortFlight()
+}
+@enduml
