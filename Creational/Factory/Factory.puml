@@ -1,4 +1,4 @@
-@startuml
+@startuml Factory Pattern
 abstract class Aircraft{
     # String liftProducer
     # String thrustProducer
