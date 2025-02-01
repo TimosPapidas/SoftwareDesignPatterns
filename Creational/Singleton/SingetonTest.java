@@ -1,4 +1,4 @@
-package SoftwareDesignPatterns.Singleton;
+package SoftwareDesignPatterns.Creational.Singleton;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;

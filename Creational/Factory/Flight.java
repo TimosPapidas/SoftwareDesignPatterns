@@ -1,4 +1,4 @@
-package SoftwareDesignPatterns.Factory;
+package SoftwareDesignPatterns.Creational.Factory;
 
 public class Flight {
     private Aircraft aircraft;

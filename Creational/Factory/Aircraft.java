@@ -1,4 +1,4 @@
-package SoftwareDesignPatterns.Factory;
+package SoftwareDesignPatterns.Creational.Factory;
 
 public abstract class Aircraft {
     protected String liftProducer;

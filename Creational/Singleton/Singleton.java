@@ -1,4 +1,4 @@
-package SoftwareDesignPatterns.Singleton;
+package SoftwareDesignPatterns.Creational.Singleton;
 
 class Singleton {
     private static Singleton instance = new Singleton();
