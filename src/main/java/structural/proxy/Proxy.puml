@@ -1,0 +1,12 @@
+@startuml
+interface Subject{
+    + {abstract} printHello()
+}
+class RealSubject implements Subject{}
+class Proxy implements Subject{
+    - RealSubject realSubject
+    - int accessCount
+    + Proxy(RealSubject realSubject)
+    + int getAccessCount()
+}
+@enduml
