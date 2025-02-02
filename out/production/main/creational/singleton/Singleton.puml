@@ -1,0 +1,11 @@
+@startuml Singleton
+class Singleton{
+    - {static} Singleton instance
+    - int counter
+    - Singleton()
+    + {static} Singleton getInstance()
+    + void addOne()
+    + int getCounter()
+    + void resetCounter()
+}
+@enduml
