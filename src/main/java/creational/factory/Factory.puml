@@ -1,0 +1,43 @@
+@startuml Factory Pattern
+abstract class Aircraft{
+    # String liftProducer
+    # String thrustProducer
+    # int crew
+    + String getLiftProducer()
+    + String getThrustProducer()
+    + int getCrew()
+    + {abstract} String eject()
+}
+
+interface AircraftFactory{
+    + {abstract} Aircraft buildAircraft()
+}
+
+class Huey extends Aircraft {
+    + Huey()
+}
+
+class Mustang extends Aircraft {
+    + Mustang()
+}
+
+class HueyFactory implements AircraftFactory {
+
+}
+
+class MustangFactory implements AircraftFactory {
+
+}
+
+class Flight {
+    - Aircraft aircraft
+    + Flight(AircraftFactory aircraftFactory)
+    + String abortFlight()
+}
+
+HueyFactory ..> Huey : builds
+MustangFactory ..> Mustang : builds
+Flight --> Aircraft : contains
+Flight --> AircraftFactory : receives
+note top of AircraftFactory : Abstract Factory, following the abstract factory pattern
+@enduml
